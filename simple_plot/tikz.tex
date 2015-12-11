@@ -1,0 +1,39 @@
+% PGF OPTIONS
+\pgfplotsset{
+             major grid style = {dashed, black},
+             axis line style  = {black, line width = 1pt}                       
+             }
+% PLOT
+\begin{tikzpicture}
+  \begin{axis}
+    [
+    grid   = major,
+    xlabel = {Inputs,  $x$},
+    ylabel = {Outputs, $y$}, 
+    title  = {A rather simple plot},
+    width  = 90mm,
+    height = 65mm,
+    xmin = 0.,
+    xmax = 10.,
+    ymin = -.6,
+    ymax = .8,
+    %enlarge x limits = false,
+    every x tick/.style = {color = black, thick},    
+    ytick  = {-.6, -.4, -.2, 0., .2, .4, .6, .8},
+    %enlarge y limits = false,
+    every y tick/.style = {color = black, thick},        
+    ]
+    \addplot  [
+              color      = blue,
+              mark       = none,
+              line width = 1pt
+              ] 
+             table [x index=0,y index=1,col sep=space] {simple_plot/data.csv};
+    \addplot  [
+              color      = teal,
+              mark       = none,
+              line width = 1pt
+              ]
+              table [x index=0,y index=2,col sep=space] {simple_plot/data.csv};
+  \end{axis}
+\end{tikzpicture}
