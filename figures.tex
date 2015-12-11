@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper,oneside,onecolumn]{article}
+% PACKAGES
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgf}
+
+% SETTINGS
+\author{Ludovic.Charleux@univ-usmb.fr}
+\title{Scientific plotter benchmark}
+\date{2015}
+
+
+\begin{document}
+\maketitle
+
+\section{Simple Plot}
+
+\begin{itemize}
+\item Matplotlib/PDF backend
+
+\includegraphics{simple_plot/mpl.pdf}
+
+\item Matplotlib/PGF backend
+
+\input{simple_plot/mpl.pgf}
+
+\end{itemize}
+\end{document}

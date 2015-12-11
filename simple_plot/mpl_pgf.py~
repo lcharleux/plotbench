@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Elsevier artwork sizing: 
+# https://www.elsevier.com/authors/author-schemas/artwork-and-media-instructions/artwork-sizing
+#fig_width = 190. * 0.0393701 # Double column 190mm
+#fig_width = 140. * 0.0393701 # One and half column 190mm
+fig_width = 90.  * 0.0393701 # Single column 90mm
+fig_heigth = fig_width /1.4    # Feel free to modify fig heigth
+
+
+
+data = np.loadtxt("data.csv").transpose()
+x  = data[0]
+y1 = data[1]
+y2 = data[2]
+
+fig = plt.figure()
+fig.set_size_inches(fig_width, fig_heigth)
+plt.plot(x, y1, label = "Data 1")
+plt.plot(x, y2, label = "Data 2")
+plt.xlabel("Inputs, $x$")
+plt.ylabel("Outputs, $y$")
+plt.grid()
+plt.tight_layout()
+plt.savefig("mpl.pdf")
+plt.savefig("mpl.pgf")
+
+
