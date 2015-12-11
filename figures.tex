@@ -1,12 +1,11 @@
-\documentclass[12pt,a4paper,oneside,onecolumn]{article}
+\documentclass[10pt,a4paper,oneside,onecolumn]{article}
 % PACKAGES
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{pgf}
-
+\usepackage{pgf, booktabs, array}
 % SETTINGS
 \author{Ludovic.Charleux@univ-usmb.fr}
 \title{Scientific plotter benchmark}
@@ -15,17 +14,22 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
+\newpage
 
 \section{Simple Plot}
 
-\begin{itemize}
-\item Matplotlib/PDF backend
+The goal is to plot data.csv in a 90 mm x 65 mm plot as follows.
 
+\subsection{Matplotlib + PDF backend}
+\begin{center}
 \includegraphics{simple_plot/mpl.pdf}
+\end{center}
 
-\item Matplotlib/PGF backend
-
+\subsection{Matplotlib + PGF backend}
+\begin{center}
 \input{simple_plot/mpl.pgf}
+\end{center}
 
-\end{itemize}
+
 \end{document}
