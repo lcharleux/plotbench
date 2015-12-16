@@ -2,13 +2,19 @@
 % PACKAGES
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage[T1]{fontenc}
 \usepackage{pgf, pgfplots, tikz, booktabs, graphicx}
+\usepackage{bookman}
+%\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
 % SETTINGS
 \author{Ludovic.Charleux@univ-usmb.fr}
 \title{Scientific porn benchmark}
 \date{2015}
 
+\newcommand{\blabla}[1] %Une commande pour remplir le vide
+  {
+  \foreach \n in {0,...,#1}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \\}
+  }
 
 \begin{document}
 \maketitle
@@ -20,19 +26,34 @@
 The goal is to plot data.csv in a 90 mm x 65 mm plot as follows.
 
 \subsection{Matplotlib + PDF backend}
+\blabla{1}
 \begin{center}
 \includegraphics{simple_plot/mpl.pdf}
 \end{center}
+\blabla{1}
 
 \subsection{Matplotlib + PGF backend}
+\blabla{1}
 \begin{center}
 \input{simple_plot/mpl.pgf}
 \end{center}
+\blabla{1}
+
+\subsection{Matplotlib + Tikz backend}
+
+\blabla{1}
+\begin{center}
+\input{simple_plot/mpl.tex}
+\end{center}
+\blabla{1}
 
 \subsection{Tikz}
+
+\blabla{1}
 \begin{center}
 \input{simple_plot/tikz.tex}
 \end{center}
+\blabla{1}
 
 \subsection{Matlab + PDF backend}
 \begin{center}
