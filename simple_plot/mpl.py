@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+from matplotlib2tikz import save as tikz_save
 
 #-------------------------------------------------------------------------------
 # FIGURE SIZING
@@ -15,19 +15,19 @@ fig_heigth = fig_width /1.4    # Feel free to modify fig heigth
 # LATEX CONFIGURATION
 import matplotlib
 params = {'text.usetex'      : True,
-          'axes.labelsize'   : 12,
+          'axes.labelsize'   : 10,
           'axes.linewidth'   : 1.5,
           'lines.markersize' : 8,
-          'font.size'        : 11,
+          'font.size'        : 10,
           'font.family'      : 'serif',         # Options: serif, sans-serif, cursive, monospace
-          'font.serif'       : 'Computer Modern Roman',         # Options: Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman
+          'font.serif'       : 'Bookman',         # Options: Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman
           'font.sans-serif'  : 'Helvetica',     # Options: Hevetica, Avant Garde, Computer Modern Sans serif
           'font.cursive'     : 'Zapf Chancery', # Options: Zapf Chancery
           'font.monospace'   : 'Courier',       # Options: Courier, Computer Modern Typewriter
-          'legend.fontsize'  : 12,
+          'legend.fontsize'  : 10,
           'legend.numpoints' : 1,
-          'xtick.labelsize'  : 11,
-          'ytick.labelsize'  : 11,
+          'xtick.labelsize'  : 9,
+          'ytick.labelsize'  : 9,
          }
 matplotlib.rcParams.update(params)
 #-------------------------------------------------------------------------------
@@ -50,5 +50,6 @@ plt.grid()
 plt.tight_layout()
 plt.savefig("mpl.pdf")
 plt.savefig("mpl.pgf")
+tikz_save("mpl.tex")
 #-------------------------------------------------------------------------------
 
