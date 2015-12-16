@@ -3,3 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}Matplotlib + PDF backend}{2}
 \contentsline {subsection}{\numberline {1.2}Matplotlib + PGF backend}{2}
 \contentsline {subsection}{\numberline {1.3}Tikz}{3}
+\contentsline {subsection}{\numberline {1.4}Matlab + PDF backend}{3}
+\contentsline {subsection}{\numberline {1.5}Matlab + export \_fig package + PDF backend}{4}
+\contentsline {subsection}{\numberline {1.6}Matlab + matlab2tikz package}{5}
+\contentsline {subsection}{\numberline {1.7}Tikz / Matlab2tikz + grid adjust}{6}
