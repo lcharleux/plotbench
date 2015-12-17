@@ -8,7 +8,7 @@
 \usepackage[T1]{fontenc}
 % SETTINGS
 \author{Ludovic.Charleux@univ-usmb.fr}
-\title{Scientific porn benchmark}
+\title{Scientific plotter benchmark}
 \date{2015}
 
 \newcommand{\blabla}[1] %Une commande pour remplir le vide
@@ -24,6 +24,8 @@
 \section{Simple Plot}
 
 The goal is to plot data.csv in a 90 mm x 65 mm plot as follows.
+
+\section{Raccoon Master : $\pi$thon }
 
 \subsection{Matplotlib + PDF backend}
 \blabla{1}
@@ -55,6 +57,10 @@ The goal is to plot data.csv in a 90 mm x 65 mm plot as follows.
 \end{center}
 \blabla{1}
 
+\newpage
+
+\section{Flo : Matlab}
+
 \subsection{Matlab + PDF backend}
 \begin{center}
 \includegraphics{simple_plot/figure_matlab.pdf}
@@ -70,13 +76,19 @@ The goal is to plot data.csv in a 90 mm x 65 mm plot as follows.
 \input{simple_plot/figure_matlab_matlab2tikz.tex}
 \end{center}
 
-\newpage
-\subsection{Tikz / Matlab2tikz + grid adjust}
+\subsection{Matlab2tikz + grid adjust}
 \begin{center}
-\input{simple_plot/tikz.tex}
-\\
 \input{simple_plot/figure_matlab_matlab2tikz2.tex}
 \end{center}
-\newpage
+
+\subsection{Subplot Matlab + matlab2tikz package}
+\begin{center}
+\input{simple_plot/figure_subplot_matlab2tikz.tex}
+\end{center}
+
+\subsection{Subplot Matlab + matlab2tikz + grid adjust}
+\begin{center}
+\input{simple_plot/figure_subplot_matlab2tikz2.tex}
+\end{center}
 
 \end{document}
